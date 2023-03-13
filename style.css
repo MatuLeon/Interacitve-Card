@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+main{
+    display: flex;
+    flex-direction: row;
+}
+
+.card-Container{
+    background: url(./images/bg-main-desktop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card-Front{
+    padding: 35% 0 0 30%;
+}
+
+.card-Back{
+    position: absolute;
+    top: 70%;
+    left: 15%;
+}

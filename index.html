@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+
+<body>
+
+  <main>
+
+    <section class="card-Container">
+        <div class="card-Front">
+
+          <img src="./images/bg-card-front.png" alt="Frente de la tarjeta">
+          <div class="card-Front__data">
+
+            <img src="./images/card-logo.svg" alt="">
+            <p class="card-Front__number">0000 0000 0000 0000</p>
+            
+            <div class="card-Front__name_dateExp">
+
+              <p class="card-Front__name">Juancho Pepe</p>
+              <p class="card-Front__dateExp">00/00</p>
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="card-Back">
+          <img src="./images/bg-card-back.png" alt="Dorso de la tarjeta">
+          <div class="card-Back__cvc">
+
+            <p class="cvc">000</p>
+          </div>
+          
+        </div>
+    </section>
+
+    <form action="">
+
+
+        <div>
+          <label for="userName">Cardholder Name</label>
+          <input type="text" id="userName" placeholder="e.g. Jane Appleseed">
+        </div>
+
+        
+        <div>
+          <label for="cardNumber">Card Number</label>
+          <input type="text" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000">
+        </div>
+
+        <div class="container__Date__CVC">
+
+
+          <div class="dateExp">
+            <label for="input-dateExp">EXP.DATE (MM/YY)</label>
+            <input type="text" id="input-dateExp" placeholder="MM">
+            <input type="text" id="" placeholder="YY">
+          </div>
+
+          <div class="cvc-Number">
+            <label for="numberCVC">CVC</label>
+            <input type="text" id="numberCVC" placeholder="e.g. 123">
+          </div>
+
+        </div>
+        <div class="containerButton--Confirm">
+          <button class="buttonCorfirm" type="submit">Confirm</button>
+        </div>
+    </form>
+
+    <section class="thank-you">
+      <img src="./images/icon-complete.svg" alt="icono de confirmacion">
+      <p class="thankYou--Title">Thank you!</p>
+      <p class="thankYou--Text"></p>
+      <button class="button">Continue</button>
+    </section>
+
+  </main>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
