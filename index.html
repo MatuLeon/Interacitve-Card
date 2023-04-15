@@ -13,85 +13,106 @@
 
 <body>
 
-  <main>
+  <div class="container">
 
-    <section class="card-Container">
-        <div class="card-Front">
+      <!------ TARJETA---- -->
 
-          <img src="./images/bg-card-front.png" alt="Frente de la tarjeta">
-          <div class="card-Front__data">
+      <section class="card">
 
-            <img src="./images/card-logo.svg" alt="">
-            <p class="card-Front__number">0000 0000 0000 0000</p>
-            
-            <div class="card-Front__name_dateExp">
+        <!----- PARTE DELANTERA--- -->
+            <div class="card__front">
 
-              <p class="card-Front__name">Juancho Pepe</p>
-              <p class="card-Front__dateExp">00/00</p>
+                <div class="front__logo">
+                  <img src="./images/card-logo.svg" alt="">
+                </div>
+
+                    <div class="front__data">
+
+                        <div class="data__number">
+                          <p>0000 0000 0000 0000</p>
+                        </div>
+
+                      <div class="data__container">
+
+                            <div class="data__name">
+                              <p>Juancho Pepe</p>
+                            </div>
+
+                            <div class="data__date">
+                              <p>00/00</p>
+                            </div>
+
+                      </div>
+
+                    </div>
 
             </div>
 
-          </div>
-        </div>
 
-        <div class="card-Back">
-          <img src="./images/bg-card-back.png" alt="Dorso de la tarjeta">
-          <div class="card-Back__cvc">
+            <!-----------PARTE DORSAL----- -->
 
-            <p class="cvc">000</p>
-          </div>
-          
-        </div>
-    </section>
+            <div class="card__back">
 
-    <form action="">
+              <div class="cvNumber">
+                <p>000</p>
+              </div>
+
+            </div>
 
 
-        <div>
-          <label for="userName">Cardholder Name</label>
-          <input type="text" id="userName" placeholder="e.g. Jane Appleseed">
-        </div>
+      </section>
 
-        
-        <div>
-          <label for="cardNumber">Card Number</label>
-          <input type="text" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000">
-        </div>
-
-        <div class="container__Date__CVC">
+      <!------ FORMULARIO--------- -->
 
 
-          <div class="dateExp">
-            <label for="input-dateExp">EXP.DATE (MM/YY)</label>
-            <input type="text" id="input-dateExp" placeholder="MM">
-            <input type="text" id="" placeholder="YY">
-          </div>
+      <form action="">
 
-          <div class="cvc-Number">
-            <label for="numberCVC">CVC</label>
-            <input type="text" id="numberCVC" placeholder="e.g. 123">
-          </div>
+            <div class="datos">
+              
+              <label for="">CARDHOLDER NAME</label>
+              <input type="text" name="" id="" placeholder="Juancho Pepe">
 
-        </div>
-        <div class="containerButton--Confirm">
-          <button class="buttonCorfirm" type="submit">Confirm</button>
-        </div>
-    </form>
+            </div>
 
-    <section class="thank-you">
-      <img src="./images/icon-complete.svg" alt="icono de confirmacion">
-      <p class="thankYou--Title">Thank you!</p>
-      <p class="thankYou--Text"></p>
-      <button class="button">Continue</button>
-    </section>
+            <div class="datos">
 
-  </main>
+              <label for="">CARD NUMBER</label>
+              <input type="text" name="" id="" placeholder="e.g. 1234 5678 9123 0000">
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+            </div>
+
+
+            <div class="datosFlex">
+
+                  <div  class="expDate">
+
+                    <label for="">EXP. DATE (MM/YY)</label>
+                    <input type="text" placeholder="MM">
+                    <input type="text" placeholder="YY">
+
+                  </div>
+
+                  <div>
+                    <label for="" class="CVC">CVC</label>
+                    <input type="text" name="" id="" placeholder="e.g. 123">
+                  </div>
+
+            </div>
+
+      </form>
+
+
   </div>
+
+
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
+
 
   <script src="./js/main.js"></script>
 </body>

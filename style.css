@@ -1,27 +1,104 @@
-* {
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+/* font-family: 'Space Grotesk', sans-serif; */
+
+
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+body{
+    background:url(./images/bg-main-desktop.png) ;
+    background-repeat: no-repeat;
+    max-height: 100vh;
 }
 
 
-main{
+.container{
+    position: relative;
+    margin-top: 130px;
+    margin-left: 200px;
+    width: 80vw;
+    height: max-content;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
-.card-Container{
-    background: url(./images/bg-main-desktop.png);
-    background-size: cover;
+/* --------TARJETA---- */
+
+.card{
+    width: 50%;
+    height: 100%;
+}
+
+/* -----TARJETA FRONTAL------------ */
+
+.card__front{
+    background: url(./images/bg-card-front.png);
     background-repeat: no-repeat;
+    background-size: contain;
+    padding-left: 30px;
+    padding-top: 15px;
+    position:absolute;
+    width: 450px;
+    height: 250px;
 }
 
-.card-Front{
-    padding: 35% 0 0 30%;
+.front__logo>img{
+    padding-top: 20px;
 }
 
-.card-Back{
+.front__data{
+    padding-top: 50px;
+}
+
+.front__data>.data__number{
+    font-size: 24px;
+    letter-spacing: 5px;
+    color: white;
+    padding-bottom: 10px;
+}
+
+.front__data>.data__container{
+    display: flex;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 3px;
+    margin-top: 20px;
+}
+
+.data__container>.data__date{
+    margin-left: 150px;
+}
+
+
+/* -----TARJETA DORSAL------------ */
+.card__back{
+    background: url(./images/bg-card-back.png);
+    background-repeat: no-repeat;
+    background-size: contain;
     position: absolute;
-    top: 70%;
-    left: 15%;
+    top: 280px;
+    left: 80px;
+    width: 450px;
+    height: 250px;
 }
+
+.card__back>div{
+    position: absolute;
+    top: 111px;
+    left: 80%;
+}
+
+
+
+
+
+
+
