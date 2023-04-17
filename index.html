@@ -20,6 +20,8 @@
       <section class="card">
 
         <!----- PARTE DELANTERA--- -->
+
+
             <div class="card__front">
 
                 <div class="front__logo">
@@ -28,13 +30,13 @@
 
                     <div class="front__data">
 
-                        <div class="data__number">
+                        <div class="data__number" id="changeNumberCard">
                           <p>0000 0000 0000 0000</p>
                         </div>
 
                       <div class="data__container">
 
-                            <div class="data__name">
+                            <div class="data__name" id="changeFullName">
                               <p>Juancho Pepe</p>
                             </div>
 
@@ -69,15 +71,20 @@
 
             <div class="datos">
               
-              <label for="">CARDHOLDER NAME</label>
-              <input type="text" name="" id="" placeholder="Juancho Pepe">
+                  <label for="fullname">CARDHOLDER NAME</label>
+
+                  <input type="text" name="fullname" id="fullname" placeholder="Juancho Pepe" maxlength="18">
+                  <p id="errorName" class="error"></p>
+
 
             </div>
 
             <div class="datos">
 
-              <label for="">CARD NUMBER</label>
-              <input type="text" name="" id="" placeholder="e.g. 1234 5678 9123 0000">
+                  <label for="numberCard">CARD NUMBER</label>
+                  <input type="text" name="" id="numberCard" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
+                  <p id="errorNumber" class="error"></p>
+
 
             </div>
 
@@ -89,16 +96,22 @@
                     <label for="">EXP. DATE (MM/YY)</label>
 
                     <span class="expDate__inputs">
-                      <input type="text" placeholder="MM">
-                      <input type="text" placeholder="YY">
+                      
+                          <input type="text" placeholder="MM">
+                          <input type="text" placeholder="YY">
+
                     </span>
 
                   </div>
 
+
                   <div class="CVC">
-                    <label for="">CVC</label>
-                    <input type="text" name="" id="" placeholder="e.g. 123">
+
+                          <label for="">CVC</label>
+                          <input type="text" name="" id="" placeholder="e.g. 123">
+
                   </div>
+
 
             </div>
 
@@ -109,7 +122,7 @@
 
   </div>
 
-
+<!------------------- FOOTER------------- -->
 
   <footer>
 

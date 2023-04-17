@@ -58,6 +58,7 @@ body{
     padding-top: 50px;
 }
 
+
 .front__data>.data__number{
     font-size: 24px;
     letter-spacing: 5px;
@@ -67,14 +68,20 @@ body{
 
 .front__data>.data__container{
     display: flex;
+    position: relative;
     color: white;
     font-size: 16px;
     letter-spacing: 3px;
     margin-top: 20px;
 }
 
+.data__name{
+    position: absolute;
+}
+
 .data__container>.data__date{
-    margin-left: 150px;
+    margin-left: 295px;
+    position: absolute;
 }
 
 
@@ -190,7 +197,13 @@ a{
 }
 
 
+/* Errores de input */
 
+.error{
+    color: red;
+    font-size: 14px;
+
+}
 
 
 
