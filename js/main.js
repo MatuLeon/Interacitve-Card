@@ -1,4 +1,4 @@
-const fullname = document.getElementById ("fullname")
+/*const fullname = document.getElementById ("fullname")
 const changeFullName = document.getElementById ("changeFullName")
 const errorName = document.getElementById("errorName")
 
@@ -24,4 +24,40 @@ numberCard.addEventListener("input", ()=>{
         errorNumber.innerHTML = "Currently Error"
     }
     else errorNumber.innerHTML = ""
-})
+})*/
+
+class Card{
+    constructor(){
+
+        //Nombre de tarjeta
+        this.fullname = document.getElementById ("fullname")
+        this.changeFullName = document.getElementById ("changeFullName")
+        this.errorName = document.getElementById("errorName")
+
+        //Numero de tarjeta
+        this.numberCard = document.getElementById ("numberCard")
+        this.errorNumber = document.getElementById ("errorNumber")
+        this.changeNumberCard = document.getElementById ("changeNumberCard")
+    }
+
+    agregarNombre(){
+        this.fullname.addEventListener("input", ()=>{
+            this.changeFullName.innerHTML = Object.values(this.fullname).toUpperCase
+        } )
+    }
+
+    verificarNombre(nombre){
+        let validation = new RegExp ('^[A-Z ]+$', 'i',);
+        if(!validation.test(nombre.value)){
+            this.errorName.innerHTML = "Currently Error"
+        }else this.errorName.innerHTML = ""
+
+    }
+}
+
+
+//Objetos
+
+const card = new Card();
+
+card.agregarNombre();
