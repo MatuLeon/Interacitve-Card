@@ -41,7 +41,8 @@
                             </div>
 
                             <div class="data__date">
-                              <p>00/00</p>
+                              <p id="changeMM">00/</p>
+                              <p id="changeYY">00</p>
                             </div>
 
                       </div>
@@ -56,7 +57,7 @@
             <div class="card__back">
 
               <div class="cvNumber">
-                <p>000</p>
+                <p id="changeCVC">000</p>
               </div>
 
             </div>
@@ -67,7 +68,7 @@
       <!------ FORMULARIO--------- -->
 
 
-      <form action="">
+      <form action="" id = "form">
 
             <div class="datos">
               
@@ -90,32 +91,32 @@
 
 
             <div class="datosFlex">
-
                   <div  class="expDate">
 
                     <label for="">EXP. DATE (MM/YY)</label>
 
                     <span class="expDate__inputs">
                       
-                          <input type="text" placeholder="MM">
-                          <input type="text" placeholder="YY">
-
+                          <input type="text" placeholder="MM" id="MM" maxlength="2">
+                          <input type="text" placeholder="YY" id="YY" maxlength="2">
                     </span>
+                    <p id="errorNumberFecha" class="error"></p>
 
                   </div>
 
 
                   <div class="CVC">
 
-                          <label for="">CVC</label>
-                          <input type="text" name="" id="" placeholder="e.g. 123">
+                          <label for="cvcNumber">CVC</label>
+                          <input type="text" name="cvcNumber" id="cvcNumber" placeholder="e.g. 123" maxlength="3">
+                          <p id="errorCVC" class="error"></p>
+                          
 
                   </div>
 
-
             </div>
 
-            <button>Confirm</button>
+            <button id="button">Confirm</button>
 
       </form>
 

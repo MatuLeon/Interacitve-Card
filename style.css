@@ -82,6 +82,7 @@ body{
 .data__container>.data__date{
     margin-left: 295px;
     position: absolute;
+    display: flex;
 }
 
 
