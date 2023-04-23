@@ -1,30 +1,4 @@
-/*const fullname = document.getElementById ("fullname")
-const changeFullName = document.getElementById ("changeFullName")
-const errorName = document.getElementById("errorName")
 
-const numberCard = document.getElementById ("numberCard")
-const errorNumber = document.getElementById ("errorNumber")
-const changeNumberCard = document.getElementById ("changeNumberCard")
-
-fullname.addEventListener ("input" , ()=>{
-    changeFullName.innerHTML = fullname.value.toUpperCase()
-    let validation = new RegExp ('^[A-Z ]+$', 'i',);
-
-    if(!validation.test(fullname.value)){
-        errorName.innerHTML = "Currently Error"
-
-    }  else errorName.innerHTML = ""
-})
-
-
-numberCard.addEventListener("input", ()=>{
-    changeNumberCard.innerHTML = numberCard.value
-    let validation = new RegExp ('^[0-9 ]+$', 'i')
-    if (!validation.test (numberCard.value)){
-        errorNumber.innerHTML = "Currently Error"
-    }
-    else errorNumber.innerHTML = ""
-})*/
 
 class Card{
     constructor(){
@@ -40,24 +14,43 @@ class Card{
         this.changeNumberCard = document.getElementById ("changeNumberCard")
     }
 
+
     agregarNombre(){
         this.fullname.addEventListener("input", ()=>{
-            this.changeFullName.innerHTML = Object.values(this.fullname).toUpperCase
-        } )
+            this.changeFullName.innerHTML = this.fullname.value.toUpperCase()
+            this.verificarNombre()
+        })
     }
 
-    verificarNombre(nombre){
+    verificarNombre(){
         let validation = new RegExp ('^[A-Z ]+$', 'i',);
-        if(!validation.test(nombre.value)){
+        if(!validation.test(this.fullname.value)){
             this.errorName.innerHTML = "Currently Error"
         }else this.errorName.innerHTML = ""
 
     }
+
+    agregarNumero(){
+        this.numberCard.addEventListener("input", ()=>{
+            this.changeNumberCard.innerHTML = this.numberCard.value
+            this.verificarNumero()
+        })
+    }
+
+    verificarNumero(){
+        let validar = new RegExp ('^[0-9 ]+$', 'i');
+        if (!validar.test(this.numberCard.value)){
+            this.errorNumber.innerHTML = "Currently Error"
+        }else this.errorNumber.innerHTML = ""
+    }
+
 }
 
 
 //Objetos
-
 const card = new Card();
 
+
+//Eventos
 card.agregarNombre();
+card.agregarNumero();
