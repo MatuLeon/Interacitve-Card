@@ -13,58 +13,33 @@
 
 <body>
 
-  <div class="container">
+  
+  <!--------- TARJETA-------->
+  
+  <main>
 
-      <!------ TARJETA---- -->
+    <div class="container-card">
 
-      <section class="card">
+      <div class="card-front">
+        <!-- <img src="./images/bg-main-mobile.png" alt="" class="bg_mobile_design"> -->
 
-        <!----- PARTE DELANTERA--- -->
+        <img src="./images/bg-card-front.png" alt="" class="card-front__bg">
+        <img src="./images/card-logo.svg" alt="" class="card-front__logo">
+        <span class="card-front__number">0000 0000 0000 0000</span>
+        <span class="card-front__name">Juancho Pepe</span>
+        <span class="card-front__date">MM / YY</span>
 
+      </div>
 
-            <div class="card__front">
+      <div class="card-back">
 
-                <div class="front__logo">
-                  <img src="./images/card-logo.svg" alt="">
-                </div>
+        <img src="./images/bg-card-back.png" alt="" class="card-back__bg">
+        <span class="card-back__cvc">123</span>
 
-                    <div class="front__data">
+      </div>
 
-                        <div class="data__number" id="changeNumberCard">
-                          <p>0000 0000 0000 0000</p>
-                        </div>
+    </div>
 
-                      <div class="data__container">
-
-                            <div class="data__name" id="changeFullName">
-                              <p>Juancho Pepe</p>
-                            </div>
-
-                            <div class="data__date">
-                              <p id="changeMM">00/</p>
-                              <p id="changeYY">00</p>
-                            </div>
-
-
-                      </div>
-
-                    </div>
-
-            </div>
-
-
-            <!-----------PARTE DORSAL----- -->
-
-            <div class="card__back">
-
-              <div class="cvNumber">
-                <p id="changeCVC">000</p>
-              </div>
-
-            </div>
-
-
-      </section>
 
       <!------ FORMULARIO--------- -->
 
@@ -124,10 +99,10 @@
 
             <section id="formEnviado"></section>
 
+      
       </form>
+  </main>
 
-
-  </div>
 
 <!------------------- FOOTER------------- -->
 
