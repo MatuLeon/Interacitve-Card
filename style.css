@@ -8,81 +8,189 @@
     box-sizing: border-box;
 }
 
-
 main{
     display: flex;
+    flex-direction: column;
     font-family: 'Space Grotesk', sans-serif;
+    justify-content: center;
+    align-items: center;
 }
 
 
-@media (min-width : 320px) and (max-width: 767px){
 
-    main{
-        flex-direction: column; 
-    }
-
-    img{
-        max-width: 100%;
-        display: block;
-    }
-
-    .card-front,
-    .card-back{
-        position: relative;
-        width: min-content;
-        font-size: 27px;
-        color: white;
-    }
-
-    .card-front{
-        border: solid red 5px;
-
-    }
-
-    .card-back{
-        border: solid 5px green;
-    }
-    
-    .card-front__bg,
-    .card-back__bg{
-        max-width: revert;
-    }
-    
-    .card-front > *:not(.card-front__bg),
-    .card-back > *:not(.card-back__bg){
-        position: absolute;
-    }
-
-    .card-front__logo{
-        top: 10%;
-        left: 5%;
-    }
-
-    .card-front__number{
-        top: 50%;
-        left:5% ;
-        letter-spacing: 5px;
-    }
-
-    .card-front__name{
-        font-size: 21px;
-        letter-spacing: 3px;
-        top: 75%;
-        left: 5%;
-    }
-
-    .card-front__date{
-        top: 75%;
-        left: 70%;
-        font-size: 21px;
-    }
+@media (min-width : 320px) and (max-width : 767px){
 
 
-    .card-back__cvc{
-        font-size: 21px;
-        top: 43%;
-        left:80% ;
-    }
+.card-container{
+    background: url(./images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    max-width: 100vw;
+    width: 100vw;
+    height: 50vh;
+}
+
+
+.card-front>*:not(.card-front__img),
+.card-back>*:not(.card-back__img){
+    position: absolute;
+}
+
+img{
+    max-width: 90vw;
+    width: 80vw;
+    display: block;
+}
+
+.card-front__img,
+.card-back__img{
+    max-width: revert;
+}
+
+.card-front,
+.card-back{
+    position: absolute;
+    width: min-content;
+}
+
+.card-front{
+    z-index: 3;
+    position: absolute;
+    top: 38vw;
+    left: 4vw;
+}
+
+.card-front__numero{
+    max-width: 100vw;
+    left: 6vw;
+    font-size: 5vw;
+    color: white;
+    letter-spacing: 2px;
+    top: 22vw;
+}
+
+.card-front__logo{
+    max-width: 30vw;
+    width:17vw;
+    top: 5vw;
+    left: 6vw;
+}
+
+.card-front__nombre{
+    max-width: 100vw;
+    width: fit-content;
+    bottom: 5vw;
+    left: 6vw;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+.card-front__exp{
+    max-width: 30vw;
+    width: fit-content;
+    font-size: 12px;
+    bottom: 5vw;
+    right: 7vw;
+    color: white;
+
+}
+
+.card-back{
+    top: 12vw;
+    left: 12vw;
+}
+
+.card-back__cvc{
+    position: absolute;
+    max-width: 100vw;
+    width: fit-content;
+    top: 19vw;
+    right: 10vw;
+    font-size: 14px;
+
+}
+
+/* ------------------------FORMULARIO----------------- */
+
+
+.form-container{
+    top: 50vh;
+    max-width: 80vw;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+form{
+    max-width: 80vw;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+
+.datos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    letter-spacing: 2px;
+}
+
+.datos>label{
+    padding: 10px 0 8px 0 ;
+}
+
+input{
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.datosFlex{
+    max-width: fit-content;
+    display: flex;
+    margin-top: 10px;
+}
+
+
+.expDate{
+    width: 50%;
+
+}
+
+
+
+.expDate__inputs>input{
+    width: 40%;
+    margin-top: 5px;
+}
+
+.CVC{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.CVC>input{
+    width: 100%;
+    margin-top: 5px;
+
+}
+
+form>button{
+    margin-top: 20px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background-color:  hsl(278, 68%, 11%);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.error{
+    color: red;
+}
 
 
 }

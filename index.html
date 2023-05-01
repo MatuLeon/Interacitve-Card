@@ -18,32 +18,28 @@
   
   <main>
 
-    <div class="container-card">
-
+    <section class="card-container">
       <div class="card-front">
-        <!-- <img src="./images/bg-main-mobile.png" alt="" class="bg_mobile_design"> -->
 
-        <img src="./images/bg-card-front.png" alt="" class="card-front__bg">
+        <img src="./images/bg-card-front.png" alt="" class="card-front__img">
         <img src="./images/card-logo.svg" alt="" class="card-front__logo">
-        <span class="card-front__number">0000 0000 0000 0000</span>
-        <span class="card-front__name">Juancho Pepe</span>
-        <span class="card-front__date">MM / YY</span>
-
+          <span class="card-front__numero" id="changeNumberCard">0000 0000 0000 0000</span>
+          <span class="card-front__nombre" id="changeFullName">Juancho Pepe</span>
+          <span class="card-front__exp">MM / YY</span>
       </div>
 
       <div class="card-back">
-
-        <img src="./images/bg-card-back.png" alt="" class="card-back__bg">
-        <span class="card-back__cvc">123</span>
+        <img src="./images/bg-card-back.png" alt="" class="card-back__img">
+          <span class="card-back__cvc" id="changeCVC">000</span>
 
       </div>
 
-    </div>
+    </section>
 
 
       <!------ FORMULARIO--------- -->
 
-
+    <section class="form-container">
       <form action="" id= "form">
 
             <div class="datos">
@@ -72,12 +68,12 @@
 
                     <label for="">EXP. DATE (MM/YY)</label>
 
-                    <span class="expDate__inputs">
+                    <div class="expDate__inputs">
                       
                           <input type="text" placeholder="MM" id="dateMM" maxlength="2" required>
                           <input type="text" placeholder="YY" id="dateYY" maxlength="2" required>
 
-                    </span>
+                    </div>
 
                     <p class="error" id="errorFecha"></p>
 
@@ -101,6 +97,8 @@
 
       
       </form>
+
+    </section>
   </main>
 
 
