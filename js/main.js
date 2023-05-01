@@ -41,11 +41,14 @@ class Card{
 
     verificarNombre(){
         let validation = new RegExp ('^[A-Z ]+$', 'i',);
-        if(!validation.test(this.fullname.value)){
-            this.errorName.innerHTML = "Currently Error"
-        }else this.errorName.innerHTML = ""
-        return true
+        if(this.fullname.value == ""){
+            this.errorName.innerHTML ="No puede estar vacio"
+        }
 
+        else if(!validation.test(this.fullname.value)){
+            this.errorName.innerHTML = "Dato invalido"
+        }
+        else this.errorName.innerHTML = ""
     }
 
 
@@ -59,8 +62,12 @@ class Card{
 
     verificarNumero(){
         let validar = new RegExp ('^[0-9 ]+$', 'i');
-        if (!validar.test(this.numberCard.value)){
-            this.errorNumber.innerHTML = "Currently Error"
+
+        if(this.numberCard.value == ""){
+            this.errorNumber.innerHTML = "No puede estar vacio"
+        }
+        else if (!validar.test(this.numberCard.value)){
+            this.errorNumber.innerHTML = "Dato invalido"
         }else this.errorNumber.innerHTML = ""
     }
 
@@ -68,15 +75,18 @@ class Card{
 
     agregarFechaMM(){
         this.dateMM.addEventListener ("input", ()=>{
-            this.changeMM.innerHTML = this.dateMM.value + "/"
+            this.changeMM.innerHTML = this.dateMM.value + " /"
             this.verificarMM()
         })
     }
 
     verificarMM(){
         let validar = new RegExp ('^[0-9 ]+$', 'i');
-        if (!validar.test(this.dateMM.value) || (this.dateMM.value <= 0 || this.dateMM.value >12)){
-            this.errorFecha.innerHTML = "Currently Error"
+        if (this.dateMM.value == ""){
+            this.errorFecha.innerHTML = "No puede estar vacio"
+        }
+        else if (!validar.test(this.dateMM.value) || (this.dateMM.value <= 0 || this.dateMM.value >12)){
+            this.errorFecha.innerHTML = "Dato invalida"
         }else this.errorFecha.innerHTML = ""
     }
 
@@ -91,11 +101,13 @@ class Card{
 
     verificarYY(){
         let validar = new RegExp ('^[0-9 ]+$', 'i');
-        if (!validar.test(this.dateYY.value) || (this.dateYY.value <23 || this.dateYY.value > 30) ){
+        if (this.dateYY.value = ""){
+            this.errorFecha.innerHTML ="No puede estar vacio"
+        }
+        else if (!validar.test(this.dateYY.value) || (this.dateYY.value <23 || this.dateYY.value > 30) ){
             this.errorFecha.innerHTML = "Currently Error"
             return form = false
         }else this.errorFecha.innerHTML = ""
-        return form = true
     }
 
 
@@ -109,19 +121,19 @@ class Card{
 
     verificarCVC(){
         let validar = new RegExp ('^[0-9 ]+$', 'i');
-        if (!validar.test(this.cvc.value)){
-            this.errorCVC.innerHTML = "Currently Error"
-            return form = false
+        if (this.cvc.value == ""){
+            this.errorCVC.innerHTML = "No puede estar vacio"
+        }
+        else if (!validar.test(this.cvc.value)){
+            this.errorCVC.innerHTML = "Dato invalido"
         }else this.errorCVC.innerHTML = ""
-        return form
     }
+
 
     formEnviado(){
         this.button.addEventListener ("click", ()=>{
-            if (this.fullname.value != null && this.numberCard.value != 0 && this.cvc.value != 0 && this.dateMM.value != 0){
-                form.remove()
-
-            }
+            form.remove()
+            document.getElementById("hidden").removeAttribute("id");
         })
     }
 

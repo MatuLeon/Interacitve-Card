@@ -25,7 +25,14 @@
         <img src="./images/card-logo.svg" alt="" class="card-front__logo">
           <span class="card-front__numero" id="changeNumberCard">0000 0000 0000 0000</span>
           <span class="card-front__nombre" id="changeFullName">Juancho Pepe</span>
-          <span class="card-front__exp">MM / YY</span>
+          <div class="card-front__exp">
+            <span id="changeMM">
+              MM / 
+            </span>
+            <span id="changeYY">
+              YY
+            </span>
+          </div>
       </div>
 
       <div class="card-back">
@@ -46,7 +53,7 @@
               
                   <label for="fullname">CARDHOLDER NAME</label>
 
-                  <input type="text" name="fullname" id="fullname" placeholder="Juancho Pepe" maxlength="18" required>
+                  <input type="text" name="fullname" id="fullname" placeholder="e.j :Juancho Pepe" maxlength="18" required>
                   <p id="errorName" class="error"></p>
 
 
@@ -55,7 +62,7 @@
             <div class="datos">
 
                   <label for="numberCard">CARD NUMBER</label>
-                  <input type="text" name="" id="numberCard" placeholder="e.g. 1234 5678 9123 0000" maxlength="19" required>
+                  <input type="text" name="" id="numberCard" placeholder="e.j: 1234 5678 9123 0000" maxlength="19" required>
                   <p id="errorNumber" class="error"></p>
 
 
@@ -91,12 +98,14 @@
 
             </div>
 
-            <button id="button">Confirm</button>
+          </form>
 
-            <section id="formEnviado"></section>
-
-      
-      </form>
+          <div class="completo" id="hidden">
+            <img src="./images/icon-complete.svg" alt="">
+            <h1>¡Muchas gracias!</h1>
+            <p>Tus datos fueron cargados</p>
+          </div>
+          <button id="button">Confirm</button>
 
     </section>
   </main>
