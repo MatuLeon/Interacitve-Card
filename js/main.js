@@ -32,11 +32,12 @@ class Card{
 
 
     agregarNombre(){
-        this.fullname.nodeValue
+        this.fullname.value
         this.fullname.addEventListener("input", ()=>{
             this.changeFullName.innerHTML = this.fullname.value.toUpperCase()
             this.verificarNombre()
         })
+        return true
     }
 
     verificarNombre(){
@@ -75,7 +76,7 @@ class Card{
 
     agregarFechaMM(){
         this.dateMM.addEventListener ("input", ()=>{
-            this.changeMM.innerHTML = this.dateMM.value + " /"
+            this.changeMM.innerHTML = this.dateMM.value + "/"
             this.verificarMM()
         })
     }
@@ -86,7 +87,7 @@ class Card{
             this.errorFecha.innerHTML = "No puede estar vacio"
         }
         else if (!validar.test(this.dateMM.value) || (this.dateMM.value <= 0 || this.dateMM.value >12)){
-            this.errorFecha.innerHTML = "Dato invalida"
+            this.errorFecha.innerHTML = "Dato invalido"
         }else this.errorFecha.innerHTML = ""
     }
 
@@ -101,12 +102,11 @@ class Card{
 
     verificarYY(){
         let validar = new RegExp ('^[0-9 ]+$', 'i');
-        if (this.dateYY.value = ""){
+        if (this.dateYY.value == ""){
             this.errorFecha.innerHTML ="No puede estar vacio"
         }
         else if (!validar.test(this.dateYY.value) || (this.dateYY.value <23 || this.dateYY.value > 30) ){
-            this.errorFecha.innerHTML = "Currently Error"
-            return form = false
+            this.errorFecha.innerHTML = "Dato invalido"
         }else this.errorFecha.innerHTML = ""
     }
 
@@ -131,9 +131,10 @@ class Card{
 
 
     formEnviado(){
-        this.button.addEventListener ("click", ()=>{
+        this.button.addEventListener("click", (e)=>{
+            e.preventDefault()
             form.remove()
-            document.getElementById("hidden").removeAttribute("id");
+            document.getElementById("hidden").removeAttribute("id")
         })
     }
 
