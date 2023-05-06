@@ -6,20 +6,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+
 }
+
+
+
+
+
+@media (min-width : 320px){
 
 main{
     display: flex;
     flex-direction: column;
-    font-family: 'Space Grotesk', sans-serif;
     justify-content: center;
     align-items: center;
 }
-
-
-
-@media (min-width : 320px) and (max-width : 767px){
-
 
 .card-container{
     background: url(./images/bg-main-mobile.png);
@@ -28,7 +30,7 @@ main{
     position: relative;
     max-width: 100vw;
     width: 100vw;
-    height: 40vh;
+    height: 50vh;
 }
 
 
@@ -233,5 +235,127 @@ a{
     text-decoration: none;
     color: hsl(279, 6%, 55%);
 }
+
+}
+
+
+@media (min-width: 1024px){
+    main{
+        display: flex;
+        flex-direction: row;
+        justify-content: unset;
+        font-family: 'Space Grotesk', sans-serif;
+
+    }
+
+    .card-container{
+        background: url(./images/bg-main-desktop.png);
+        background-repeat: no-repeat;
+        background-size: 30vw;
+        height: 100vh;
+        width: 50vw;
+    }
+    
+    .card-front{
+        position: absolute;
+        top: 5vw;
+        left: 10vw;
+        width: min-content;
+    }
+
+    .card-front>*:not(.card-front__img){
+        position: absolute;
+    }
+
+    img{
+        width: min-content;
+    }
+
+    .card-front__logo{
+        max-width: 7vw;
+        top: 2vw;
+        left: 3vw;
+    }
+
+    .card-front__exp{
+        font-size: 18px;
+        bottom: 2vw;
+        right:3vw;
+    }
+
+    .card-front__numero{
+        left: 3vw;
+        font-size: 28px;
+        letter-spacing: 3px;
+        top: 9vw;
+    }
+    
+    
+    .card-front__nombre{
+        bottom: 2vw;
+        left: 3vw;
+        color: white;
+        letter-spacing: 2px;
+        font-size: 18px;
+    }
+
+    .card-back{
+        top: 25vw;
+        left: 14vw;
+    }
+    
+    .card-back__cvc{
+        top: 8vw;
+        right: 5vw;
+        font-size: 18px;
+    
+    }
+
+
+
+    .form-container{
+        font-family: 'Space Grotesk', sans-serif;
+        margin-left: 80px;
+
+    }
+
+    form{
+        width: 30vw;
+    }
+
+    
+    .datos>label{
+        padding: 20px 0 8px 0 ;
+    }
+    
+    input{
+        padding: 10px;
+    }
+    
+    .datosFlex{
+        margin-top: 25px;
+    }
+    
+    
+    button{
+        margin-top: 20px;
+        width: 30vw;
+    }
+    
+    .attribution{
+        margin-top: 0px;
+        font-family: 'Space Grotesk', sans-serif;
+        position: absolute;
+        right: 0;
+    }
+    
+    .attribution>p{
+        padding: 5px 0 0 0;
+    }
+    
+    a{
+        text-decoration: none;
+        color: hsl(279, 6%, 55%);
+    }
 
 }

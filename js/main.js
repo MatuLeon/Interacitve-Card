@@ -1,5 +1,5 @@
 let form = document.getElementById ("form")
-let pass 
+
 class Card{
     constructor(){
 
@@ -40,25 +40,18 @@ class Card{
     }
 
     verificarNombre(){
-        let pass
+        let pass = true
         let validation = new RegExp ('^[A-Z ]+$', 'i',);
         if(this.fullname.value == ""){
             this.errorName.innerHTML ="No puede estar vacio"
             pass = false
-            console.log (pass)
-            return pass
         }
 
         else if(!validation.test(this.fullname.value)){
             this.errorName.innerHTML = "Dato invalido"
             pass = false
-            console.log (pass)
-            return pass
-
         }
-        else this.errorName.innerHTML = "" 
-        console.log (pass = true)
-        
+        else this.errorName.innerHTML = ""
 
     }
 
@@ -141,6 +134,12 @@ class Card{
 
 
     formEnviado(){
+        
+        card.agregarNombre();
+        card.agregarNumero();
+        card.agregarFechaMM();
+        card.agregarFechaYY();
+        card.agregarCVC();
         this.button.addEventListener("click", (e)=>{
             e.preventDefault()
             form.remove()
@@ -156,11 +155,5 @@ const card = new Card();
 
 
 //Eventos
-card.agregarNombre();
-card.agregarNumero();
-card.agregarFechaMM();
-card.agregarFechaYY();
-card.agregarCVC();
-card.formEnviado();
-console.log (pass)
 
+card.formEnviado();
